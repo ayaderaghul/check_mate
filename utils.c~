@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_mate.h                                       :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/10 08:41:38 by lnguyen           #+#    #+#             */
-/*   Updated: 2018/08/11 11:54:13 by lnguyen          ###   ########.fr       */
+/*   Created: 2018/08/11 12:28:23 by lnguyen           #+#    #+#             */
+/*   Updated: 2018/08/11 12:28:52 by lnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef CHECK_MATE_H
-# define CHECK_MATE_H
+#include "check_mate.h"
 
-typedef struct prof
+void ft_putchar(char c)
 {
-	struct prof *next;
-	char* c;
-	int x;
-	int y;
-} profile;
+    write(1, &c, 1);
+}
 
-typedef struct coor
+void ft_putstr(char *str)
 {
-	struct coor *next;
-	int x;
-	int y;
-} coordinate;
+    int i;
+    i = 0;
+    while (str[i])
+        ft_putchar(i++);
+    ft_putchar('\n');
+}
 
+int ft_strlen(char *str)
+{
+    int i;
 
-
-
-#endif
+    i = 0;
+    while (str[i])
+        ++i;
+    return (i);
+}

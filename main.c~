@@ -6,7 +6,7 @@
 /*   By: lnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 08:40:45 by lnguyen           #+#    #+#             */
-/*   Updated: 2018/08/10 16:46:50 by lnguyen          ###   ########.fr       */
+/*   Updated: 2018/08/11 11:16:32 by lnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,58 @@ void add_coor(coordinate **begin_list, int i, int j)
 	if (*begin_list)
 		new_elem->next = *begin_list;
 	*begin_list = new_elem;
+}
+
+int absolute(int a)
+{
+	if (a < 0)
+		return (-a);
+	return (a);
+}
+
+int min(int a, int b)
+{
+	if (a < b)
+		return (a);
+	return (b);
+}
+
+int max(int a, int b)
+{
+	if (a < b)
+		return (b);
+	return (a);
+}
+
+
+coordinate **shifted_bishop_range(coordinate **begin_list, int x, int y, int l)
+{
+	int x_f = -x;
+	int x_c = l - 1 - x;
+	int y_f = -y;
+	int y_c = l - 1 - y;
+	
+	int s_d = max(x_f, y_f);
+	int e_d = min (x_c, y_c);
+	
+	int n;
+	n = s_d;
+    while (n <= e_d)
+	{
+		add_coor(begin_list, n, n);
+		++n;
+	}
+	
+	int s_u = min(absolute(x_f), absolute (y_c));
+	int e_u = min(absolute(x_c), absolute(y_f));
+	
+	n = -s_u;
+	while (n <= e_u)
+	{
+		add_coor(begin_list, n, -n);
+		++n;
+	}
+	return (begin_list);
 }
 
 coordinate **pawn_range(int x, int y)
