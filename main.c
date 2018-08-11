@@ -1,4 +1,4 @@
-#include "../check_mate.h"
+#include "check_mate.h"
 
 int main(int ac, char **av)
 {
@@ -26,5 +26,11 @@ int main(int ac, char **av)
 		write(1,"Success.\n",9);
 	else
 		write(1,"Failure.\n",9);
-    return 0;
+	free(*kings);
+	while(*attackers)
+	{
+		free(*attackers);
+		*attackers = (*attackers)->next;
+	}
+	return 0;
 }
