@@ -6,7 +6,7 @@
 /*   By: lnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/11 12:49:36 by lnguyen           #+#    #+#             */
-/*   Updated: 2018/08/11 18:10:13 by lnguyen          ###   ########.fr       */
+/*   Updated: 2018/08/11 18:58:24 by lnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 int check_mate(profile **kings, profile **attackers, int l)
 {
-	write(1,"in check mate\n",14);
     int k_x = (*kings)->x;
     int k_y = (*kings)->y;
-	write(1,"before loop\n",12);
 
     while(*attackers)
     {
-		write(1,"in loop\n",10);
         if ((*attackers)->c == 'P')
         {
             int p_x = (*attackers)->x;
