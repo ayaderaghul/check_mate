@@ -17,7 +17,12 @@ int main()
 	int k_y = (*kings)->y;
 
 	printf("x %d, y %d\n", k_x, k_y);
-
+	free(*kings);
+	while (*attackers)
+	{
+		free(*attackers);
+		*attackers = (*attackers)->next;
+	}
 //    print_profile(kings);
 //    print_profile(attackers);
     return 0;
