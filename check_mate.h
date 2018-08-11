@@ -6,7 +6,7 @@
 /*   By: lnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 08:41:38 by lnguyen           #+#    #+#             */
-/*   Updated: 2018/08/11 12:34:10 by lnguyen          ###   ########.fr       */
+/*   Updated: 2018/08/11 12:50:11 by lnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,15 @@ int absolute(int a);
 int min(int a, int b);
 int max(int a, int b);
 
+void scan(char *str, int i, profile **king, profile **attackers);
+
+
+
+
 int shifted_bishop_attack(int x, int y, int l, int k_x, int k_y);
 int pawn_attack(int x, int y, int k_x, int k_y);
 int rook_attack(int x, int y, int l, int k_x, int k_y);
 
+int check_mate(profile **king, profile **attackers, int l);
 
 #endif
