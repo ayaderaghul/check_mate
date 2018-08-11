@@ -1,0 +1,10 @@
+int main()
+{
+    profile *king = NULL;
+    profile **kings = &king;
+    profile *attacker = NULL;
+    profile **attackers = &attacker;
+    *kings = create_profile('K', 1, 1);
+    printf(" %d\n", check_mate(kings, attackers, 2));
+    return 0;
+}

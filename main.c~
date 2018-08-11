@@ -6,7 +6,7 @@
 /*   By: lnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 08:40:45 by lnguyen           #+#    #+#             */
-/*   Updated: 2018/08/11 18:01:20 by lnguyen          ###   ########.fr       */
+/*   Updated: 2018/08/11 17:37:30 by lnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,5 @@ int main(int ac, char **av)
 	else
 		//ft_putstr("Failure.");
 		write(1,"f",1);
-	free(*kings);
-	while(*attackers)
-	{
-		free(*attackers);
-		*attackers = (*attackers)->next;
-	}
 	return(0);
 }

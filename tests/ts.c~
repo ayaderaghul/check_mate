@@ -1,0 +1,19 @@
+#include "../check_mate.h"
+int main()
+{
+    profile *king = NULL;
+    profile *attacker = NULL;
+    profile **kings = &king;
+    profile **attackers = &attacker;
+    scan("..KP",1,kings,attackers);
+	//   print_profile(kings);
+    //   print_profile(attackers);
+
+	if (check_mate(kings, attackers, 4) == 1)
+		write(1, "success", 50);
+	else
+		write(1, "fail", 50);
+
+    return 0;
+}
+

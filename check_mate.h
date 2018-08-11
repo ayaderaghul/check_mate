@@ -6,7 +6,7 @@
 /*   By: lnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/10 08:41:38 by lnguyen           #+#    #+#             */
-/*   Updated: 2018/08/11 15:40:57 by lnguyen          ###   ########.fr       */
+/*   Updated: 2018/08/11 15:53:52 by lnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,13 @@ typedef struct prof
 	int y;
 } profile;
 
-typedef struct coor
-{
-	struct coor *next;
-	int x;
-	int y;
-} coordinate;
-
 void ft_putchar(char c);
 void ft_putstr(char *str);
 int ft_strlen(char *str);
 profile *create_profile(char c, int i, int j);
 void add_profile(profile **begin_list, char c, int i, int j);
 void print_profile(profile **p);
-coordinate *create_coor(int i, int j);
-void add_coor(coordinate **begin_list, int i, int j);
+
 int absolute(int a);
 int min(int a, int b);
 int max(int a, int b);

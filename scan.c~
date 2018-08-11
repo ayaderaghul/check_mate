@@ -6,7 +6,7 @@
 /*   By: lnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/11 12:48:22 by lnguyen           #+#    #+#             */
-/*   Updated: 2018/08/11 17:54:50 by lnguyen          ###   ########.fr       */
+/*   Updated: 2018/08/11 17:21:47 by lnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,7 @@ void scan(char *str, int i, profile **kings, profile **attackers)
 		while (k < 4)
         {
             if (str[j] == 'K')
-			{
 				*kings = create_profile('K', j, i);
-//				add_profile(kings, 'K', j, i);
-				break ;
-			}
             if (str[j] == array[k])
             {
                 add_profile(attackers, str[j], j, i);
