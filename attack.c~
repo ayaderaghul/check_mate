@@ -6,7 +6,7 @@
 /*   By: lnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/11 12:33:12 by lnguyen           #+#    #+#             */
-/*   Updated: 2018/08/11 15:28:18 by lnguyen          ###   ########.fr       */
+/*   Updated: 2018/08/11 15:22:42 by lnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,10 @@ int rook_attack(int x, int y, int l, int k_x, int k_y)
         ++n;
     }
     return (0);
+}
+
+int main()
+{
+	printf(" %d,\n", shifted_bishop_attack(2,1, 4, 0,0));
+	return 0;
 }
