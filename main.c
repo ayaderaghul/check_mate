@@ -21,7 +21,6 @@ int main(int ac, char **av)
 		scan(av[i], i-1 ,kings, attackers);
 		++i;
 	}
-
 	if(check_mate(kings, attackers, l))
 		write(1,"Success.\n",9);
 	else
