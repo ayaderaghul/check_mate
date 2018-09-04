@@ -22,9 +22,9 @@ int main(int ac, char **av)
 		++i;
 	}
 	if(check_mate(kings, attackers, l))
-		write(1,"Success\n",9);
+		write(1,"Success\n",8);
 	else
-		write(1,"Fail\n",9);
+		write(1,"Fail\n",5);
 	free(*kings);
 	while(*attackers)
 	{
